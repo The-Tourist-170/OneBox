@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'Limelight-Regular';
+    src: url('/fonts/Limelight-Regular.woff2') format('woff2');
+}
+
+@theme {
+  --font-limelight: 'Limelight-Regular', sans-serif;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('/fonts/Oswald.woff2') format('woff2');
+}
+
+@theme {
+  --font-oswald: 'Oswald', sans-serif;
+}
