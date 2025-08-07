@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 
 import com.onebox.backend.DTO.UserDto;
 import com.onebox.backend.Model.User;
-import com.onebox.backend.Repository.UserRepository;
+import com.onebox.backend.Repository.Jpa.UserRepository;
 import com.onebox.backend.Utils.JwtResponse;;
 
 @Service
@@ -53,5 +53,10 @@ public class UserService {
         newUser.setPassword(hashedPassword);
 
         return userRepository.save(newUser);
+    }
+
+    public User findByEmail(String email) {
+        return userRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("User not found"));
     }
 }

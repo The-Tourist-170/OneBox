@@ -1,6 +1,8 @@
 package com.onebox.backend.DTO;
 
-import java.util.Date;
+import java.time.LocalDateTime;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,7 +16,10 @@ import lombok.Setter;
 public class EmailDto {
     private String subject;
     private String from;
-    private Date sentDate;
+
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
+    private LocalDateTime sentDate;
+
     private String content;
 
     @Override

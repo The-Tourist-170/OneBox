@@ -1,4 +1,4 @@
-package com.onebox.backend.Repository;
+package com.onebox.backend.Repository.Jpa;
 
 import java.util.List;
 import java.util.Optional;

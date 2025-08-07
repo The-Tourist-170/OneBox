@@ -42,10 +42,6 @@ public class SecurityConfig {
                 .authorizeHttpRequests(requests -> requests
                         .requestMatchers(HttpMethod.POST, "/users/register").permitAll()
                         .requestMatchers(HttpMethod.POST, "/users/login").permitAll()
-                        // .requestMatchers(HttpMethod.GET, "/accounts/user/**").permitAll()
-                        // .requestMatchers(HttpMethod.POST, "/accounts").permitAll()
-                        // .requestMatchers(HttpMethod.DELETE, "/accounts/**").permitAll()
-                        // .requestMatchers(HttpMethod.GET, "/emails/**").permitAll()
                         .anyRequest().authenticated())
                 .addFilterBefore(jwtAuthenticationFilter,
                         UsernamePasswordAuthenticationFilter.class);

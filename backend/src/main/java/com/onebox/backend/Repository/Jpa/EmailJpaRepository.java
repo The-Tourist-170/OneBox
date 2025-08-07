@@ -1,4 +1,4 @@
-package com.onebox.backend.Repository;
+package com.onebox.backend.Repository.Jpa;
 
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -8,6 +8,8 @@ import com.onebox.backend.Model.Email;
 import com.onebox.backend.Model.ImapAccount;
 
 @Repository
-public interface EmailRepository extends JpaRepository<Email, Long> {
+public interface EmailJpaRepository extends JpaRepository<Email, Long> {
     Optional<Email> findByAccountAndMessageId(ImapAccount account, String messageId);
+
+    void deleteAllByAccount_Id(Long accountId);
 }

@@ -11,7 +11,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.onebox.backend.Model.User;
-import com.onebox.backend.Repository.UserRepository;
+import com.onebox.backend.Repository.Jpa.UserRepository;
 
 @Service
 public class MyUserDetailsService implements UserDetailsService {
